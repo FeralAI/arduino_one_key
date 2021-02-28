@@ -26,20 +26,20 @@
 
 void setup() {
 #ifdef DEBUG
-  Serial.begin(115200);
-  Serial.println("Begin keyboard");
+	Serial.begin(115200);
+	Serial.println("Begin keyboard");
 #endif
-  pinMode(SWITCH_PIN, INPUT_PULLUP);
-  Keyboard.begin();
+	pinMode(SWITCH_PIN, INPUT_PULLUP);
+	Keyboard.begin();
 }
 
 void loop() {
 #ifdef DEBUG
-  Serial.print("Key state: ");
-  Serial.println(digitalRead(SWITCH_PIN));
+	Serial.print("Key state: ");
+	Serial.println(digitalRead(SWITCH_PIN));
 #endif
-  if (digitalRead(SWITCH_PIN) == LOW)
-    Keyboard.press(KEY_CHAR);
-  else
-    Keyboard.release(KEY_CHAR);
+	if (digitalRead(SWITCH_PIN) == LOW)
+		Keyboard.press(KEY_CHAR);
+	else
+		Keyboard.release(KEY_CHAR);
 }
