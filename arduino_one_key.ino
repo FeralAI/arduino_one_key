@@ -26,11 +26,11 @@
 
 void setup() {
 #ifdef DEBUG
-	Serial.begin(115200);
-	Serial.println("Begin keyboard");
+  Serial.begin(115200);
+  Serial.println("Begin keyboard");
 #endif
-	pinMode(SWITCH_PIN, INPUT_PULLUP);
-	Keyboard.begin();
+  pinMode(SWITCH_PIN, INPUT_PULLUP);
+  Keyboard.begin();
 }
 
 void loop() {
